@@ -11,6 +11,10 @@ Boston, MA
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
 ![ArcGIS](https://img.shields.io/badge/ArcGIS-2C7AC3?style=flat&logo=esri&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 
 </div>
 
@@ -22,7 +26,21 @@ I believe cities move better when their data does too. I spend my days wrangling
 
 Professionally, I keep a large ArcGIS Enterprise ecosystem humming: automating the quiet, unglamorous work of account lifecycle management, license reclamation, and organizational reporting so that the people who make maps can focus on making maps.
 
-In my own time, I volunteer with [TransitMatters](https://github.com/transitmatters) to help hold the MBTA accountable through data. There's something deeply satisfying about a slow-zone alert that actually reflects a slow zone, or a ferry tab that didn't exist last month. Small things that riders notice even if they never see the code behind them.
+In my own time, I volunteer with [TransitMatters](https://github.com/transitmatters), currently as interim co-lead of TransitMatters Labs, the org's volunteer engineering program, to help hold the MBTA accountable through data. There's something deeply satisfying about a slow-zone alert that actually reflects a slow zone, or a ferry tab that didn't exist last month. Small things that riders notice even if they never see the code behind them.
+
+---
+
+## Featured Project
+
+### [US Rail Performance Archiver](https://github.com/ankoure/us-rail-performance-archiver)
+
+A real-time GTFS-RT ingest and archival pipeline polling live transit feeds from 97 agencies (252 endpoints) across the US.
+
+- S3-backed content-addressed landing storage with request-level deduplication
+- Cloud-native infra on AWS (EC2, S3, Fargate), provisioned with Terraform, with a decoupled poll/rollup architecture
+- Performance-critical GTFS-RT decoder ported from Python to Rust via PyO3 bindings
+- Curated analytics layer (on-time performance, schedule adherence) exposed through a FastAPI REST API
+- Next.js/TypeScript dashboard visualizing real-time delays, service alerts, and segment-level speed data
 
 ---
 
@@ -36,6 +54,7 @@ In my own time, I volunteer with [TransitMatters](https://github.com/transitmatt
 | **The RIDE** | Paratransit ridership ingestion |
 | **Added Fields** | Full-stack pipe: gobble → mbta-performance → dashboard tooltip |
 | **Mattapan Trolley** | Slow zone support and [New Train Tracker](https://traintracker.transitmatters.org/?line=Mattapan&category=old_vehicles) integration |
+| **transitmattr** | R client package for the Data Dashboard API — test suite, vignettes, pkgdown site, CI; accepted to CRAN |
 | **Infrastructure** | uv migration, GitHub Actions build offload, Dependabot patches, SharePoint integration, spaCy-based alert classification, tests & docstrings |
 
 **Repositories:** [t-performance-dash](https://github.com/transitmatters/t-performance-dash/pulls?q=is%3Apr+is%3Aclosed+author%3Aankoure) · [data-ingestion](https://github.com/transitmatters/data-ingestion/pulls?q=is%3Apr+is%3Aclosed+author%3Aankoure) · [mbta-performance](https://github.com/transitmatters/mbta-performance/pulls?q=is%3Apr+is%3Aclosed+author%3Aankoure) · [regional-rail-explorer](https://github.com/transitmatters/regional-rail-explorer/pulls?q=is%3Apr+is%3Aclosed+author%3Aankoure) · [gobble](https://github.com/transitmatters/gobble/pulls?q=is%3Apr+is%3Aclosed+author%3Aankoure)
